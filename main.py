@@ -12,7 +12,7 @@ B) {sheet[1][p][1]}
 C) {sheet[1][p][2]}
 D) {sheet[1][p][3]}
 Your response is(A,B,C or D): """)
-  while response != "A" and response != "B" and response != "C" and response != "D":
+  while response not in ["A", "B", "C", "D"]:
     response = input().upper()
   if response == correct_sequence[p]:
     print("Congratulations! You have answered correctly")
