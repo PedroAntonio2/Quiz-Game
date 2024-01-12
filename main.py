@@ -2,6 +2,7 @@ sheet = [["What is the name of the current United States President(2024)?", "Wha
         [["Donald Trump","Barack Obama","Joe Biden","Bolsonaro"], ["Brazilia","Lisbon","Washington", "São Paulo"], ["5","8","11","10"]]]
 
 correct_sequence = ["C", "A", "D"]
+score = 0
 
 for p in range(len(sheet[0])):
   response = " "
@@ -16,5 +17,8 @@ Your response is(A,B,C or D): """)
     response = input().upper()
   if response == correct_sequence[p]:
     print("Congratulations! You have answered correctly")
+    score += 1
   else:
     print("You did not answer correctly")
+
+print("Your Score is: %.2f%%" % float(score/len(sheet[0]) * 100))
